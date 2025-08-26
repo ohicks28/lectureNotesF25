@@ -17,6 +17,14 @@ What is this class?
 Syllabus
 
 Canvas setup - weekly class material
+    - textbook is online and in Canvas
+    - Sireum Logika - used by VS Code
+    - Homework every week
+        - drop lowest 2
+        - due on tuesday
+        - turn in up to 24 hours late
+        - Bug bounty - find errors in homework or in then online textbook, submit for points
+        - can work together, just submit seprately
 
 Ed Discussion
 
@@ -58,13 +66,13 @@ Conclusion: Fred doesn't like pizza.
 
 
 
---> Is this a valid argument? 
+--> Is this a valid argument? YES*
 
-
+Fred could not be a person
 
 (is there a hidden assumption we're making about Fred?)
 
-
+that he is a person
 
 
 
@@ -73,6 +81,7 @@ Conclusion: Fred doesn't like pizza.
 Logical Arguments with "OR"
     - can be ambiguous! Why?
 
+    exclusive vs. inclusive
 
 I order fries or I order chips.
 
@@ -80,17 +89,15 @@ I order fries or I order chips.
 
 - in English, how do we interpret "or"? 
 
-
+exclusive
 
 - in programming? 
 
-
-
+inclusive
 
 "Or" in THIS class: 
 
-
-
+inclusive, like programming (unless otherwise specified)
 
 
 /////////////////////////////
@@ -100,8 +107,7 @@ Premise 2: I don't fold the laundry.
 
 --> What can I conclude? 
 
-
-
+you'll do the dishes
 
 //////////////////////////////////////////////////////////
 
@@ -115,9 +121,7 @@ if (num < 4 || x >= 10) {
 Suppose we know "statement" is executed
 --> What can we conclude? 
 
-
-
-
+x >= 10
 
 /////////////////////////////////////////////////////////
 
@@ -133,17 +137,18 @@ if (num < 4 || x >= 10) {
 Suppose we know "statement" is executed
 --> What can we conclude? 
 
+num < 4 and num > 2
 
+if num is an int...
+
+num = 3
 
 ////////////////////////////////////////////////////////
 
 What rule are we seeing with an "or" statement,
 where we know that one of the statements is NOT true?
 
-
-
-
-
+the other side is true
 
 ////////////////////////////////////////////////////////
 
@@ -154,12 +159,16 @@ It is raining.
 
 --> What can I conclude? 
 
-
-
+you will get wet
 
 How to write with -> symbol?
 
+it is raining -> you will get wet.
 
+p: it is raining
+q: you will get wet
+
+p -> q
 
 ////////////////////////////////////////////////////////
 
@@ -168,9 +177,7 @@ and we know that the "if" part is true?
 
     ...what can we always conclude?
 
-
-
-
+the then part is true (modus ponens)
 
 /////////////////////////////////////////////////////////
 
@@ -179,10 +186,7 @@ I am late for class.
 
 --> What can I conclude?
 
-
-
-
-
+nothing, something else could have happened to make you late
 
 /////////////////////////////////////////////////////////
 
@@ -191,12 +195,7 @@ I hear my alarm.
 
 --> What can I conclude? 
 
-
-
-
-
-
-
+nothing, something may have happened to make me late
 
 /////////////////////////////////////////////////////////
 
@@ -205,15 +204,16 @@ I'm not late for class.
 
 --> What can I conclude?
 
+I heard my alarm
 
-
+contrapositive
 
 IF I don't hear my alarm THEN I will be late for class.
 
 is equivalent to:
 
-
-
+if I'm not late for class, then I did hear my alarm
+p -> q == !p -> !q
 
 
 if (condition) {
@@ -222,7 +222,7 @@ if (condition) {
 
 --> what if we know statement is NOT executed? 
 
-
+then the condition was false
 
 If p Then q
 
@@ -241,8 +241,7 @@ if (num < 4 || x >= 10) {
 
 --> suppose y is 17 here. What do we know?
 
-
-
+nothing (y might have already been 17)
 
 /////////////////////////////////////////////////////////
 
@@ -254,9 +253,7 @@ if (num < 4 || x >= 10) {
 
 --> suppose y is 17 here. Can we conclude anything now?
 
-
-
-
+num < 4 or x >= 10
 
 //////////////////////////////////////////////////////////
 
@@ -267,6 +264,9 @@ if (num < 4 || x >= 10) {
 
 --> suppose y is NOT 17 here. What do we know?
 
+num >= 4 AND x < 10
+
+DeMongan's Law
 
 ///////////////////////////////////////////////////////
 
@@ -294,7 +294,7 @@ Who can say, "I'm a knave"?
 Can a knight?
 Can a knave?
 
-
+neither, because knights can only say they are knights and knaves can Never say they are knaves
 
 //////////////////////////////////////////////////////////
 
@@ -302,14 +302,12 @@ You see two inhabitants, Eve and Fred.
 
 Eve says, "I am a knave or Fred is a knight."
 
+What are Eve and Fred? both knights
 
-
-What are Eve and Fred? 
-
-
+if Eve is a knight, then Fred is also a knight
+if Eve is a Knave, Fred could be either a knight or a knave
 
 (what does the "or" mean?) 
-
 
 
 Her WHOLE statement is the or -- we only need to whole statement
@@ -321,18 +319,21 @@ to be true, not each individual piece.
 You see two different inhabitants, Ava and Bob.
 
 Ava says that Bob is a knave.
-Bob says, "Neither Ava nor I are knaves."
+Bob says, "Neither Ava nor I are knaves." 
 
-
+rewrite:"Ava and I are knights"
 
 What are Ava and Bob?
 
+If ava is a knight, bob is a knave (this would work)
+If ava is a knave, bob must be a knight (this makes bob's statement is false)
 
+Ava must be a knight, because that is the only way that both statements work
 
 
 What does "neither" mean?
-    When is Bob's statement true? 
-    When is Bob's statement false? 
+    When is Bob's statement true? (Bob and Ava are both knights)
+    When is Bob's statement false? If either or both people are knaves
 
 
 
