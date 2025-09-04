@@ -86,9 +86,9 @@ really saying:
 
 What is the *contrapositive* of our statement?
 
+p -> q
 
-
-
+if you have enrolled in the course, then you have taken the prerequisite
 
 //////////////////////////////////////////
 ∧ ∨ ¬ → 
@@ -104,10 +104,16 @@ if (x <= 2 || y >= 0) {
 
 Propositional atoms?
 
+p: x <= 2
+q: y >= 0
+r: z == 17
+s: answer == 25
 
 Translation? (if ... then ...)
 
+if (both conditions are true) then answer is 25
 
+(p || q) && !r -> s
 //////////////////////////////////
 
 Consider these two statements:
@@ -118,11 +124,11 @@ q: I can drive a car
 
 1) If I am at least 16 years old, then I can drive a car.
 
-
+p -> q
 
 2) I'm not at least 16 years old or I can drive a car.
 
-
+!p || q
 
 --> are they saying the same thing?
 
@@ -132,9 +138,11 @@ q: I can drive a car
 --> could we PROVE it? (equiv1.logika, equiv2.logika)
 
 
+the truth assignments are all the same (not good enough)
 
+the outputs are all the same (better, but still not the best)
 
-
+for every possible truth assignment, the two statements have the same output.
 
 
 
@@ -155,7 +163,7 @@ if (a == 4 || a == 5) {
 How could we express the NEGATION
 (i.e., what condition would be true for the "else")?
 
-
+if (a != 4 && a! = 5)
 
 
 ///
@@ -167,7 +175,7 @@ if (a == 4 && b == 5) {
 How could we express the NEGATION
 (i.e., what condition would be true for the "else")?
 
-
+if (a != 4 || b != 5)
 
 
 
@@ -175,9 +183,9 @@ How could we express the NEGATION
 
 DeMorgan's laws in propositional logic:
 
-¬(p ∨ q) is equivalent to... 
+¬(p ∨ q) is equivalent to... !p && !q
 
-¬(p ∧ q) is equivalent to... 
+¬(p ∧ q) is equivalent to... !p || !q
 
 
 --> how can we prove the first of DeMorgan's laws?

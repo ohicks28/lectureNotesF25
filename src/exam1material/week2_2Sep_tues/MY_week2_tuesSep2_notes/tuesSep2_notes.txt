@@ -34,10 +34,10 @@ When is this true? When is this false?
 
 p q  #  p → q
 --------------
-T T  #    
-T F  #    
-F T  #    
-F F  #    
+T T  #    t
+T F  #    f
+F T  #    t
+F F  #    t
 
 //////////////////////////////////////
 
@@ -66,15 +66,16 @@ In math?
 
 For logic statements (∧ ∨ ¬ →)?
 
-
-
-
+()
+and
+or
+implies
 
 Given this statement:
 
     ¬p ∨ q ∧ r
 
-
+    !p || (q && r)
 
 
 Add () to show the order of operations.
@@ -99,17 +100,17 @@ r is F
 Order of operations
     ¬ evaluates right to left
         ¬¬p is equivalent to....
-
+        p
 
     ∧ and ∨ evaluate left to right
         p ∧ q ∧ r is equivalent to....
         p ∨ q ∨ r is equivalent to....
 
-
+        (p && q) && r
     → evaluates right to left
         p → q → r is equivalent to....
 
-
+        p (q r)
 
 
 
@@ -123,10 +124,11 @@ Top-level operator (what happens LAST?)
 
 top-level? 
 
+not
 
-How is this similar to a circuit? 
+How is this similar to a circuit? last gate
 
-
+top-level operator is the output of the entire statement
 
 ///////////////////////////////
 
@@ -137,7 +139,7 @@ rewrite with ():
 
 top-level operator? 
 
-
+or
 
 //////////////////////////////
 
@@ -163,6 +165,10 @@ If we have 2 variables, how many possible truth assignments?
 
     p, q
 
+    T T
+    T F
+    F T
+    F F
 
 
 
@@ -176,7 +182,7 @@ If we have 3 variables, how many possible truth assignments?
 If we have n variables, how many possible truth assignments?
 
 
-
+2^n
 
 
 
@@ -190,20 +196,20 @@ Contingent, contradictory, tautology
 
 
 
-contingent: 
+contingent: sometimes true, sometimes false (at least one truth assignment evalutes to true and at least one evalutes to false)
 
-    Example? 
-
-
-
-contradictory:
-
-    Example? 
+    Example? p || q
 
 
-tautology:
 
-    Example? 
+contradictory: every truth assignment evalutes to false
+
+    Example? !p && p
+
+
+tautology: always true (every truth assignment evaluates to true)
+
+    Example? !p || p
     
 
 ///////////////////////////////////////////
@@ -219,25 +225,27 @@ Write a truth table for:
 
 (p ∧ r) → (r ∨ ¬q)
 
-
+                   *
 -----------------------------
-p q r  #  (p ∧ r) → (r ∨ ¬q)
+p q r  #  (p ∧ r) → (r ∨ ¬q)  
 -----------------------------
-T T T #      
-T T F #      
-T F T #      
-T F F #     
-F T T #     
-F T F #    
-F F T #     
-F F F #     
+T T T #    T  
+T T F #    T
+T F T #    T
+T F F #    T 
+F T T #    T 
+F T F #    T
+F F T #    T
+F F F #    T
 -----------------------------
+tautology
 
-
-
-
+# - column division
+* - top-level operator
 
 --> top-level operator?
+
+implies
 
 --> need to evaluate statement on ALL possible truth assignments
 
@@ -274,6 +282,8 @@ trees
 parse trees
 
 --> what are they?
+
+
 
 --> draw one for (p ∧ q) → ¬r
 
@@ -315,25 +325,29 @@ Propositional logic.
 ////////////////////////////////////////
 
 Which ones are propositions?
+propositional atom: as simple of a proposition as possible (doesn't contain operators)
 
 Today is Thursday.
 
+yes, can be either true or false
 
 What time is it?
-
+no
 
 x == 2
-
+yes
 
 Pigs can fly.
 
+yes
 
 Drive carefully.
 
+no
 
 y <= 4
 
-
+yes
 
 ////////////////////////////////////////
 
@@ -351,20 +365,23 @@ Suppose we have these propositional atoms:
 How would we express these as English sentences?
 
     ¬p:
-
+     it is not snowing
 
     p ∧ q:
-
+     it is below freezing or it is snowing
 
     p → q :
 
-
+    if its below freezing, then its snowing
     ¬p → ¬q:
-
+    if its not below freezing, then its not snowing
 
     r ∨ s:
 
+    (y <=4) || (x==2)
+
     ¬r:
+    y > 4
 
 ////////////////////////
 

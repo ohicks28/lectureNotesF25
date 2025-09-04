@@ -68,6 +68,7 @@ Mae tells you, "Bill would tell you that I am a knave."
 
 What types are Sarah, Bill, and Mae?
 
+All are knaves
 
 (How might we simplify everything?)
 
@@ -80,7 +81,7 @@ What types are Sarah, Bill, and Mae?
 Lion always lies on Mondays, Tuesdays, and Wednesdays.
 Lion always tells the truth on other days.
 Unicorn always lies on Thursdays, Fridays, and Saturdays,
-    and always tells the truth on other days.
+and always tells the truth on other days.
 
 On Sunday, everyone tells the truth.
 
@@ -89,7 +90,7 @@ Unicorn says: "Yesterday was one of my lying days, too."
 
 What day is it?
 
-
+Thursday
 
 ////////////////////////////////
 
@@ -108,18 +109,16 @@ The second one says: "I'm Tweedledee."
 
 Which is which? What day is it?
 
-
-
-
-
-
-
+Sunday - both are telling the truth
+Monday - one is lying, one is telling the truth
+Tuesday - one is lying, one is telling the truth
+Wednesday - one is lying, one is telling the truth
+Thursday - one is lying, one is telling the truth
+Friday - one is lying, one is telling the truth
 
 //////////////////////////////////
 
 In-class quiz
-
-
 
 
 
@@ -138,9 +137,13 @@ The first one says: "Tweedledee owns the rattle."
 The second one says: "I'm Tweedledee!"
 
 Who gets the rattle?
+first one is Tweedledee, second one is tweedledum - this works
+first one is Tweedledum, second one is Tweedledee - this also works
+
+first twin gets the rattle
 
 Who is who?
-
+no clue, but both options say you should give the rattle to the first twin
 
 ///////////////////////////////////////////
 
@@ -157,9 +160,6 @@ Silver casket: "The portrait is not in this casket."
 Lead casket: "The portrait is not in the gold casket."
 
 Where is the portrait?
-
-
-
 
 
 
@@ -196,6 +196,8 @@ Albert says: "Then I also know when Cheryl's birthday is."
 
 When is it?
 
+July 16th
+
 
 
 
@@ -218,14 +220,19 @@ Basic operations:
 
 Basic logic gates (draw on board)
 
+See iPhone photos
 
 gates still used to design circuits
 
 
+
 why do we care about equivalent circuits?
 
+save money and space making smaller circuits
 
 what about programming?
+
+
 
 ///////////////////////////////////////////////////
 
@@ -236,28 +243,28 @@ AND:
 
 p q  #  p ∧ q
 --------------
-T T  #    
-T F  #    
-F T  #     
-F F  #    
+T T  #   T 
+T F  #   F 
+F T  #   F 
+F F  #   T
 
 
 OR:
 
 p q  #  p ∨ q
 --------------
-T T  #    
-T F  #    
-F T  #    
-F F  #    
+T T  #    T
+T F  #    T
+F T  #    T
+F F  #    F
 
 
 NOT:
 
 p  # ¬p
 --------
-T  # 
-F  # 
+T  #  F
+F  #  T
 
 ////////////////////////////////////////////////
 
@@ -275,11 +282,12 @@ Otherwise we have not.
 
 p q  #  p → q
 --------------
-T T  #    
-T F  #      
-F T  #    
-F F  #     
+T T  #    T
+T F  #    F 
+F T  #    T
+F F  #    T 
 
+vaculously true - if statement is false, so "promise" isn't relevent
 /////////////////////////////////////////
 
 How does the implies operator relate to programming?
