@@ -206,7 +206,7 @@ if (Character.isDigit(letter) || num < 10) {
 --> how would we negate it without using a ! operator?
     also no extra ()
 
-
+if (Character.isDigit(letter) == false && num >= 10)
 
 ///////////////////////
 
@@ -218,7 +218,13 @@ if ((y >= 4 && num != 14) || x > 0) {
 
 negate it:
 
+if (!(y >= 4 && num != 14) || x > 0)
 
+if (!(y >= 4 && num != 14) && x <= 0)
+
+if ((y < 4 || num == 14) && x <= 0)
+
+if ((y < 4 || num == 14) && x <= 0)
 ///////////////////////
 
 in-class quiz
@@ -252,7 +258,7 @@ associative laws
 
 commutative laws 
 
-
+im so sorry future olivia i've got so much going on
 
 --> you may still be asked to demonstrate these with
     truth tables or prove them with natural deduction (coming soon)
@@ -264,11 +270,9 @@ Summary of equivalence.
 
 How do we prove two statements ARE equivalent?
 
-
+two truth tables, show that for every truth assignment, they have the same output
 
 How do we prove two statements are NOT equivalent?
-
-
 
 
 //////////////////////////
@@ -276,6 +280,10 @@ How do we prove two statements are NOT equivalent?
 What is equivalent to:
 
 ¬p → q
+
+!q -> p 
+
+p || q
 
 
 //////////////////////////
@@ -287,19 +295,20 @@ Satisfiability.
 
 - what kind of statement is satisfiable? what kind is not?
 
+if you can find a truth assignment that satifies it (tatology, contingent)(not contradictory)
 
 - is this satisfiable?
 
     (p ∨ ¬q) ∧ (q ∨ ¬r) ∧ (r ∨ ¬p)
 
+yes, 
 
 
 
 
+to show a statement is satisifiable: one truth assignment
 
-to show a statement is satisifiable: 
-
-to show a statement is NOT satisfiable: 
+to show a statement is NOT satisfiable: show all truth tbale shows false
 
 
 ////////////////////////////
