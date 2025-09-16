@@ -29,12 +29,13 @@ where *premises* is a comma-separated list.
 
 In truth tables?
 
-
+argument was valid when every truth assignment that made all premises
+true and also made conclusion
 
 
 Natural deduction?
 
-
+make different claims and apply deduction rules to build a new claims
 
 
 //////////////////////////
@@ -140,7 +141,7 @@ Idea:
 
 p ∨ q
 
-
+at least one variable is true
 
 
 

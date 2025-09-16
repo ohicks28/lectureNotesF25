@@ -26,13 +26,12 @@ Today:
 
 Proving two statements are equivalent with deduction?
 
-
 statement1
 statement2
 
+proof 1: statement 1|- statement 2
 
-
-
+proof 2: statement 2 |- statement 1
 ////////////////////////////////
 
 Example: prove one of the distributive laws
@@ -44,6 +43,7 @@ p ∨ (q ∧ r)     is equivalent to       (p ∨ q) ∧ (p ∨ r)
 
 
 
+
 ////////////////////////////////
 
 if (extraCredit == true || grade < 90) {
@@ -52,7 +52,13 @@ if (extraCredit == true || grade < 90) {
     }
 }
 
-
+if (extraCredit == true || (grade < 90))
+{
+    if (extraCredit == true || grade >= 80)
+    {
+        //do stuff
+    }
+}
 --> how does the distributive law tell us we can rewrite 
     this?
 
@@ -121,15 +127,17 @@ Covers everything we've done up to this point
 
 See Canvas announcement for list of topics.
 
-
+Also look at "weekly class material" for review of material
 
 
 How to prove two propositional logic statements are 
 equivalent?
 
-    Approach 1:
+    Approach 1: Truth tables
+    for each truth assignment, both statements have the same output
 
-    Approach 2:
+    Approach 2: deduction
+    statement1 |- statement2
 
 
 
@@ -137,21 +145,30 @@ equivalent?
 How to prove propositional logic statements are 
 NOT equivalent?
 
-
-
+one counterexample (a truth assignment where the outputs differ)
 
 What is satisfiability? 
 
+there exists at least one truth assignment that makes hte statement output true
+
+are: contingent, tautology
+not: contradictiory
+
+prove satisfiability: 
 
 
 - Determining whether an argument is valid or invalid
     (what is an argument?)
-    valid: 
+
+    premises, conclusion
+    
+    valid: every time all premsies are true, the conclusion is also true
 
     how prove valid?
-
+    1) make a "combined" truth table and make sure every truth assignment that makes all premises true makes the conclusion true
+    2) deduction (will only prove valid arguments)
     how prove invalid?
-
+    1) find one truth assignemnt that makes all premises true, but the conclusion false
 
 /////////////////////////////////////////
 
