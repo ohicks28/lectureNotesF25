@@ -44,32 +44,54 @@ How do we approach proofs?
 
 1. Write out all the premises
 2. Extract all information from premises 
+    - AND statement - break apart both sides
+    - IMPLIES statement, if we hav eor can get the if part, then use ImplyE
 3. Look at what you are trying to prove (what do we look for in goal/conclusion?)
 
-    ∧ - 
+    top level operator
 
-    ∨ - 
+    ∧ - prove both sides seprately
 
-    → - 
+    ∨ - can you get one of the two sides? Use OrI to get conclusion, 
+    else see if you have an or statement as a premise or a previous claim, use OrE
+    if nothing else works, try PbC on the whole conclusion
 
-    ¬(something) - 
+    → - open ImplyI subproof. assume the if part and then try to get the then part
+
+    ¬(something) - open NegI subproof, assume "something", goal is F
 
     just a propositional atom? 
+       find where it appears, try to extract it
+       try orE if an or startment is available
+       if nothing works, try PbC, assume !p, try to get F 
+
+After each claim - see if there is anything else to extract.
+                   scan earlier claims to see if you can put them 
+                   together with new claims
 
 
-After each claim - 
 
+Inside a subproof - write down what your goal is
+                    OrE, ImplyI, PbC, NegI
 
+    - OrE - need to already have an OR statement
+        your goal in both subproofs is whatever your current
+        goal is when you open those subproofs
 
-Inside a subproof - 
-
-
+    - ImplyI - have to assume the if, goal must be the then
+    
+    - PbC - assume must be a NOT statement, goal is F
+        Afterwards must conclude the assume statement 
+        without the not
+    
+    - NegI - assume whatever, goal is F
+        Afterwards must conclude !(assume)
 
 Doesn't fit a pattern or doesn't work out from above?
 
+OrE, PbC
 
-
-
+If you et stuck in an OrE
 --> when do we open a subproof?
 
 
