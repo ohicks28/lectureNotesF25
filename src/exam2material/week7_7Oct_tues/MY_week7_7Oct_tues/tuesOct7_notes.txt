@@ -42,7 +42,7 @@ Domain: Snickers, Kit Kat, Skittles, Pay Day, Starburst
     true or false? 
 
 
-
+NOT all candy with chocolate also contains peanuts 
 ///
 Domain: Snickers, Kit Kat, Skittles, Pay Day, Starburst
 
@@ -93,28 +93,28 @@ There exists: usually connect with...⋀
 Evaluating predicate logic statements
 
 1) ∀ x P(x)
-    true when: 
-    false when: 
+    true when: P(k) is true for every k in our domain
+    false when: we can find one k in our domain where P(k) is false
 
 2) ∃ x P(x)
-    true when: 
-    false when: 
-
+    true when: we can find one k in our domain where P(k) is true
+    false when: when P(k) is false for every k in our domain
+i
 3) ¬(∀ x P(x))
-    true when: 
-    false when: 
+    true when: we can find one k in our domain where P(k) is false
+    false when: when P(k) is true for every k in our domain
 
 4) ¬(∃ x P(x))
-    true when: 
-    false when: 
+    true when: when P(k) is false for every k
+    false when: we can fiund one k where P(k) is true
 
 5) ∀ x ¬P(x)
-    true when: 
-    false when: 
+    true when: every k makes P(k) false
+    false when: we can find one k that makes P(k) true
 
 6) ∃ x ¬P(x)
-    true when: 
-    false when: 
+    true when: one k makes P(k) false
+    false when: all k make P(k) true
 
 
 /////////////////
