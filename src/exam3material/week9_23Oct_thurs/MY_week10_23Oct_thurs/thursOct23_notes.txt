@@ -18,22 +18,17 @@ Those would be great practice for next exam -- the proof files are in week9_21Oc
 Soundness and completeness of predicate logic.
 
 
-Soundness: definition?
+Soundness: definition? everything that we can prove with our proof system is actually true
 
-    propositional:
+    propositional: yes
 
-    predicate logic:
+    predicate logic: yes
 
+Completeness: definition? we can use our proof system to prove everytihng that is true
 
+    propositional: yes
 
-
-Completeness: definition?
-
-    propositional:
-
-    predicate logic:
-
-
+    predicate logic: not complete
 
 ///////////////////////////////////
 
@@ -42,15 +37,13 @@ Same argument might be VALID in one domain and INVALID in another
 - deduction can only prove arguments that are valid in ANY domain
 - we can't prove all valid arguments
 
-
 Domain with integers with operations like +
 
+All integers? 2 + 3 = ? 5
 
-All integers? 2 + 3 = ?
 
-
-Subset (0,1,2,3,4) of integers. 2 + 3 = ?
-
+Subset (0,1,2,3,4) of integers. 2 + 3 = ? 0 
+(if you cannot find the "correct number", wrap it to the beginning again)
 
 
 ////////////////////////////////////
@@ -150,18 +143,21 @@ Proof by induction.
 Do you think induction can be used to prove properties for
     ALL integers?
 
+must have a smallest value in the domain 
+
+(doesn't have to be any specific set of numbers, you just must have a smallest value)
 
 /////////////////////////////////
 
 Induction template.
 
-1) 
+1) label base case. prove the claim is true for the smallest element in your domain
 
+2) label the inductive step. "Assume the inductive hypothesis - that <insert claim> holds for some fixed k in <insert domain>"
 
-2) 
+3) try to prove for k + 1. "We must show that our claim holds for k + 1"
 
-
-3) 
+4) Summarize. "It follows by induction that <insert domain> holds for all <insert domain>"
 
 /////////////////////////////////
 
@@ -187,12 +183,18 @@ Example: Prove that 3^n - 1 is even for all positive integers n.
 
 
 what does "even" mean? 
-
+a number k is even if there exists and int a such that k = 2 * a
 
 
 Proof by induction.
 
+base case: we must prove that our claim hold for our smallest positive int, n = 1. 3^1 - 1 = 2
+because 2 = 2*1, and 1 is an int, we know 2 is even
 
+inductive step. we assume the inductive hypothesis -- that 3^k - 1 is even for some positive ints k.
+we must show that 3^(k + 1) - 1 is even.
+
+if 3^k - 1 is even, then there exists an int a 2a = 3^k - 1
 
 //////////////////////////////////
 
