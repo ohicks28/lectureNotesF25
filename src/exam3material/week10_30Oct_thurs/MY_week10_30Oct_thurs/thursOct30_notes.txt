@@ -59,6 +59,12 @@ Try direct proof first.
 
 Now try contrapositive proof.
 
+if some int x is even, then x^2 is even
+
+Assume n is even for some int n
+then n = 2k for some int k
+
+n^2 = (2k)^2
 
 --> best to indicate in proof that you are using contrapositive
 
